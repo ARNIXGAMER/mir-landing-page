@@ -5,6 +5,8 @@
     --font-color:#8794BA;
 }
 .body{
+    display: flex;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
 }
 .container{
@@ -12,12 +14,16 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    gap: 60px;
 }
 .info__cards{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 335px;
+}
+.text{
     width: 335px;
 }
 .title{
@@ -31,7 +37,25 @@
     color: var(--font-color);
 }
 .porcentaje{
-    width: auto;
+    width: 335px;
+}
+@media(min-width:520px){
+    .info__cards{
+        width: 475px;
+    }
+    .text{
+        width: 475px;
+    }
+    .title{
+        font-size: 35px;
+        line-height: 47px;
+    }
+    .paragraph{
+        font-size: 17px;
+    }
+    .porcentaje{
+        width: 400px;
+    }
 }
 @media (min-width:768px){
     .info__cards{
@@ -40,12 +64,74 @@
     .porcentaje{
         width: 600px;
     }
+    .text{
+        width: 750px;
+    }
+    .title{
+        font-size: 35px;
+        line-height: 47px;
+    }
+    .paragraph{
+        font-size: 17px;
+    }
 }
 @media (min-width:1024px){
+    .container{
+        gap: 80px;
+    }
     .info__cards{
-        width: 750px;
+        width: 950px;
+        height: 410px;
         flex-direction: row;
     }
     .--reverse{
         flex-direction: row-reverse;
     }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 480px;
+        height: 240px;
+    }
+    .title{
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .paragraph{
+        font-size: 18px;
+    }
+}
+@media (min-width:1300px){
+    .info__cards{
+        width: 1100px;
+    }
+}
+@media (min-width:1600px){
+    .container{
+        width: 1180px;
+        gap: 120px;
+    }
+    .info__cards{
+        width: 1180px;
+        justify-content: space-between;
+    }
+    .--reverse{
+        flex-direction: row-reverse;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 480px;
+        height: 240px;
+    }
+    .title{
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .paragraph{
+        font-size: 18px;
+    }
+    
+}
